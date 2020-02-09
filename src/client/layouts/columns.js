@@ -1,4 +1,4 @@
-import { round } from '../utils/round';
+import { round } from '../../utils/round';
 
 // compute sizes for column directed layouts
 export const computeColumnLayout = ({ photos, columns, containerWidth, margin }) => {

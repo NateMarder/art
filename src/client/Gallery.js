@@ -4,7 +4,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import Photo, { photoPropType } from './Photo';
 import { computeColumnLayout } from './layouts/columns';
 import { computeRowLayout } from './layouts/justified';
-import { findIdealNodeSearch } from './utils/findIdealNodeSearch';
+import { findIdealNodeSearch } from '../utils/findIdealNodeSearch';
 
 const Gallery = React.memo(function Gallery({
   photos,

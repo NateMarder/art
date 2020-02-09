@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, 'src', 'client'),
   mode: 'development',
   entry: {
     app: './entry.js',
@@ -12,7 +12,7 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
+    contentBase: path.resolve(__dirname, 'src', 'client'),
     disableHostCheck: true,
     port: 8000,
     host: 'localhost',
@@ -28,7 +28,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'react-photo-gallery': path.resolve(__dirname, 'src/Gallery'),
+      'react-photo-gallery': path.resolve(__dirname, 'src/client/Gallery'),
     },
   },
 };

@@ -1,6 +1,6 @@
-import { ratio } from '../utils/ratio';
-import { round } from '../utils/round';
-import { findShortestPath } from '../utils/dijkstra';
+import { ratio } from '../../utils/ratio';
+import { round } from '../../utils/round';
+import { findShortestPath } from '../../utils/dijkstra';
 
 // compute sizes by creating a graph with rows as edges and photo to break on as nodes
 // to calculate the single best layout using Dijkstra's findShortestPat
