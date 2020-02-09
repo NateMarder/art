@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static('public'));
+// the path provided to static is relative to the directory the node process' location
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.send('art approaches!');

@@ -6,6 +6,9 @@ dist
 logs
 *.log
 
+# docs
+docs/private/
+
 # Runtime data
 pids
 *.pid
