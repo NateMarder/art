@@ -17,8 +17,15 @@
   "bugs": {
     "url": "https://github.com/neptunian/react-photo-gallery/issues"
   },
+  "scripts": {
+    "server": "nodemon --watch src/server --delay 1 src/server/index.js",
+    "start": "webpack-dev-server --progress",
+    "dev": "concurrently -n 'server,client' 'npm run server' 'npm run start'",
+    "lint": "eslint -c ./.eslintrc.js ./src",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "test": "jest"
+  },
   "dependencies": {
-    "axios": "^0.19.2",
     "express": "^4.17.1",
     "prop-types": "~15.7.2",
     "regenerator-runtime": "^0.13.3",
@@ -31,9 +38,11 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "array-move": "^2.1.0",
+    "axios": "^0.19.2",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.0",
+    "concurrently": "^5.1.0",
     "cross-env": "^5.0.5",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -47,6 +56,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "jsonp": "^0.2.1",
+    "nodemon": "^2.0.2",
     "prettier": "^1.6.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -60,13 +70,6 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
-  },
-  "scripts": {
-    "server": "node src/server/index.js",
-    "start": "webpack-dev-server --progress",
-    "lint": "eslint -c ./.eslintrc.js ./src",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "test": "jest"
   },
   "alias": {
     "serve": "npm run server"
