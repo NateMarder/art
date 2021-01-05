@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "array-move": "^2.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.0",
